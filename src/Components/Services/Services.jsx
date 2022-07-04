@@ -16,7 +16,7 @@ const Services = () => {
   const transition = { duration: 1, type: "spring" };
 
   return (
-    <div className="services">
+    <div className="services" id="Services">
 
       <div className="awesome">
         <span style={{color: darkMode? 'white': ''}}>My Awesome</span>
@@ -44,13 +44,17 @@ const Services = () => {
             detail= {"Figma, Sketch, Photoshop, Adobe, Adobe XD"}
           />
         </motion.div>
-        <div style={{top:"12rem", left:"5rem" }}>
+        <motion.div 
+        initial={{ left: "-2rem" }}
+        whileInView={{ left: "5rem" }}
+        transition={ transition }
+        style={{top:"12rem", left:"5rem" }}>
           <Card
             emoji={Glasses}
             heading={"Developer"}
-            detail={"Html, Css, Javascript, React"}
+            detail={"Html, Css, Javascript, React, Node, Mongo"}
           />
-        </div>
+        </motion.div>
         <motion.div 
         initial={{ left: "28rem" }}
         whileInView={{ left: "21rem" }}
